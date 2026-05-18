@@ -2,12 +2,12 @@
 #       PROGRAMACIÓN 1 - TRABAJO PRÁCTICO - AÑO 2026
 #-------------------------------------------------------------------------------
 #
-# EQUIPO Nº xx:
+# Integrantes del grupo:
 #
-# - Apellido, Nombre
-# - Apellido, Nombre
-# - Apellido, Nombre
-# - Apellido, Nombre
+# - Vazquez, Santos Nicolás - Comisión 4A
+# - Morello, Nino Julián - Comisión 2A
+# - Mengarelli, Luca Franco - Comisión 1B
+# - Benegas, Fernando Gabriel - Comisión 2B
 #
 # ARCHIVO: jugar.R
 #
