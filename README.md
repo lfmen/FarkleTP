@@ -36,9 +36,9 @@ pak::pkg_install("ee-unr/programacion-1/tp/farkle")
 - Si todos los dados son retirados, se puede volver a tirar con 5 dados manteniendo el puntaje del turno.
 - **Gana el primero en llegar exactamente a 1000 puntos.** Si se supera ese número, no se suman los puntos del turno.
 
-## Equipo
+## Integrantes del grupo
 
-- Apellido, Nombre
-- Apellido, Nombre
-- Apellido, Nombre
-- Apellido, Nombre
+- Vazquez, Santos Nicolás - Comisión 4A
+- Morello, Nino Julián - Comisión 2A
+- Mengarelli, Luca Franco - Comisión 1B
+- Benegas, Fernando Gabriel - Comisión 2B
