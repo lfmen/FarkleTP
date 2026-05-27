@@ -68,7 +68,7 @@ mostrar_tabla <- function(nombre1, nombre2, puntaje1, puntaje2) {
 
 
 # ==============================================================================
-# RESPONSABLE: Luca
+# RESPONSABLE: Nino
 # ==============================================================================
 
 #' Ejecuta el turno completo de un jugador
@@ -78,7 +78,7 @@ mostrar_tabla <- function(nombre1, nombre2, puntaje1, puntaje2) {
 #' @param puntaje_maximo Número con el puntaje objetivo del juego (1000).
 #' @return Número con los puntos ganados en este turno (0 si perdió el turno).
 ejecutar_turno <- function(nombre, puntaje_total, puntaje_maximo) {
-  # TODO (Luca):
+  # TODO (Nino):
   # - Inicializar puntaje del turno en 0 y dados disponibles en 5
   # - Entrar en un bucle que se repite mientras el turno esté activo:
   #     * Mostrar información del turno (nombre, puntaje total, dados disponibles, puntos acumulados)
