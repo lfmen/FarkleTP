@@ -2,11 +2,11 @@
 #       PROGRAMACIÓN 1 - TRABAJO PRÁCTICO - AÑO 2026
 #-------------------------------------------------------------------------------
 #
-# EQUIPO Nº xx:
+# GRUPO Nº 12:
 #
-# - Apellido, Luca
-# - Apellido, Nico
-# - Apellido, Nino
+# - Vazquez, Santos Nicolás
+# - Morello, Nino Julián
+# - Mengarelli, Luca Franco
 #
 # ARCHIVO: funciones.R
 #
