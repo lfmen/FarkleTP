@@ -23,41 +23,20 @@
 #'
 #' @param tirada Vector numérico con los resultados de los dados tirados.
 #' @return Número entero con el puntaje total de la tirada.
+#' @return 0 si no hay puntaje que sumar.
 calcular_puntaje_tirada <- function(tirada) {
-  # TODO (Nino):
-  # - Recorrer cada dado del vector "tirada"
-  # - Si el dado vale 1, sumar 100 al puntaje
-  # - Si el dado vale 5, sumar 50 al puntaje
-  # - Los demás valores no suman nada
-  # - Retornar el puntaje total
-}
-
-#' Calcula el puntaje total obtenido en una tirada
-#'
-#' @param tirada Vector numérico con los resultados de los dados tirados.
-#' 
-#' @return Número entero con el puntaje total de la tirada
-#' @return FALSE si no hay puntaje que sumar
-#' @examples 
-
-
-calcular_puntaje_tirada <- function(tirada) {
-  
   puntaje <- 0
-  acumulado <- for (i in 1:length(tirada)) {
-    {
-    
+  for (i in 1:length(tirada)) {
     if (tirada[i] == 1) {
       puntaje <- puntaje + 100
-      
-    } 
+    }
     if (tirada[i] == 5) {
       puntaje <- puntaje + 50
     }
   }
-  if (acumulado ==0) {return(FALSE)}
-  return(acumulado)
-  }
+  if (puntaje == 0) { return(0) }
+  return(puntaje)
+}
 
 
 # ==============================================================================
@@ -69,10 +48,13 @@ calcular_puntaje_tirada <- function(tirada) {
 #' @param tirada Vector numérico con los resultados de los dados tirados.
 #' @return Vector numérico con los dados que no suman puntos.
 dados_sin_puntaje <- function(tirada) {
-  # TODO (Luca):
-  # - Recorrer cada dado del vector "tirada"
-  # - Si el dado NO es 1 ni 5, agregarlo a un vector de "restantes"
-  # - Retornar ese vector (puede estar vacío si todos los dados sumaron)
+  restantes <- c()
+  for (dado in tirada) {
+    if (dado != 1 && dado != 5) {
+      restantes <- c(restantes, dado)
+    }
+  }
+  return(restantes)
 }
 
 
