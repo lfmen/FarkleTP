@@ -2,6 +2,22 @@
 
 Trabajo Práctico de la materia **Programación 1** - Implementación del juego de dados **Farkle** en R.
 
+## Integrantes del grupo
+
+- Vazquez, Santos Nicolás - Comisión 4A
+- Morello, Nino Julián - Comisión 2A
+- Mengarelli, Luca Franco - Comisión 1B
+
+## Asignaciones
+
+| Función | Responsable | Estado |
+|---|---|---|
+| ~~`calcular_puntaje_tirada`~~ | Nino | ~~Hecho~~ |
+| `ejecutar_turno` | Nino | |
+| `dados_sin_puntaje` | Luca | |
+| `mostrar_tabla` | Nico | |
+| ~~`pantalla_inicio`~~ | Nico | ~~Hecho~~ |
+
 ## Cómo ejecutar
 
 Desde la terminal, situarse en este directorio y correr:
@@ -36,8 +52,4 @@ pak::pkg_install("ee-unr/programacion-1/tp/farkle")
 - Si todos los dados son retirados, se puede volver a tirar con 5 dados manteniendo el puntaje del turno.
 - **Gana el primero en llegar exactamente a 1000 puntos.** Si se supera ese número, no se suman los puntos del turno.
 
-## Integrantes del grupo
 
-- Vazquez, Santos Nicolás - Comisión 4A
-- Morello, Nino Julián - Comisión 2A
-- Mengarelli, Luca Franco - Comisión 1B
