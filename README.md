@@ -16,7 +16,7 @@ Trabajo Práctico de la materia **Programación 1** - Implementación del juego 
 | `ejecutar_turno` | Nino | |
 | `dados_sin_puntaje` | Luca | |
 | `mostrar_tabla` | Nico | |
-| ~~`pantalla_inicio`~~ | Nico | ~~Hecho~~ |
+| `pantalla_inicio` | Nico | |
 
 ## Cómo ejecutar
 
@@ -30,6 +30,7 @@ Rscript jugar.R
 
 ```
 ├── jugar.R        # Script principal (punto de entrada)
+├── funciones.R    # Funciones auxiliares del juego
 └── README.md
 ```
 
