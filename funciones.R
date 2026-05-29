@@ -16,7 +16,7 @@
 
 
 # ==============================================================================
-# RESPONSABLE: Nino
+# RESPONSABLE: Nino Morello
 # ==============================================================================
 
 #' Calcula el puntaje obtenido en una tirada
@@ -39,7 +39,7 @@ calcular_puntaje_tirada <- function(tirada) {
 
 
 # ==============================================================================
-# RESPONSABLE: Luca
+# RESPONSABLE: Luca Mengarelli
 # ==============================================================================
 
 #' Cuenta cuántos dados de una tirada no suman puntos
@@ -59,7 +59,7 @@ dados_sin_puntaje <- function(tirada) {
 
 
 # ==============================================================================
-# RESPONSABLE: Nino
+# RESPONSABLE: Nino Morello
 # ==============================================================================
 
 #' Ejecuta el turno completo de un jugador
@@ -69,7 +69,7 @@ dados_sin_puntaje <- function(tirada) {
 #' @param puntaje_maximo Número con el puntaje objetivo del juego (1000).
 #' @return Número con los puntos ganados en este turno (0 si perdió el turno).
 ejecutar_turno <- function(nombre, puntaje_total, puntaje_maximo) {
-  # TODO (Nino):
+  # TODO (Nino Morello):
   # - Inicializar puntaje del turno en 0 y dados disponibles en 5
   # - Entrar en un bucle que se repite mientras el turno esté activo:
   #     * Mostrar información del turno (nombre, puntaje total, dados disponibles, puntos acumulados)
