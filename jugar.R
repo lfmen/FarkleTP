@@ -16,21 +16,15 @@
 #
 # Las funciones de interfaz (pantalla_inicio, mostrar_tabla) fueron
 # implementadas por Nico en interfaz.R y se cargan desde ahí.
+#
+# RESPONSABLE: Luca Mengarelli
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
 # Paquete "farkle"
 #-------------------------------------------------------------------------------
 
-# El paquete "farkle" ofrece funciones auxiliares que simplifican muchas partes
-# de la solución de este trabajo. Se recomienda leer la documentación con
-# atención y correr los ejemplos.
-# Las líneas de código que se encargan de la instalación del paquete no deben
-# quedar en este script, pero sí la sentencia library para cargarlo.
-
-# Instalación (correr una sola vez, luego comentar o eliminar):
-# install.packages("pak")
-# pak::pkg_install("ee-unr/programacion-1/tp/farkle")
+# Instalación (correr una sola vez): ver README.
 
 library("farkle")
 
