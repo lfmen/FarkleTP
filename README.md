@@ -10,34 +10,37 @@ Trabajo Práctico de la materia **Programación 1** - Implementación del juego 
 
 ## Organización del grupo
 
-El trabajo fue desarrollado de forma colaborativa usando **GitHub** como repositorio compartido.
-Cada integrante trabajó en su propia rama y subió sus cambios al repositorio para que el resto
-pudiera verlos e integrarlos.
+Usamos **GitHub** como repositorio compartido. Cada uno trabajó en su propia rama y fue integrando los cambios del resto.
 
-La división del trabajo se hizo por funciones: cada uno tomó las funciones que le correspondían,
-las implementó de forma independiente y las documentó siguiendo el mismo estilo que el resto del
-grupo. A continuación se detalla quién hizo qué en cada archivo.
+División del trabajo por archivo:
 
 ### `funciones.R`
 
-| Función | Responsable | Estado |
-|---|---|---|
-| `calcular_puntaje_tirada` | Nino | Terminada |
-| `dados_sin_puntaje` | Luca | Terminada |
-| `ejecutar_turno` | Nino | En progreso |
+| Función | Responsable |
+|---|---|
+| `calcular_puntaje_tirada` | Nino Morello |
+| `dados_sin_puntaje` | Luca Mengarelli |
+| `ejecutar_turno` | Nino Morello |
 
 ### `interfaz.R`
 
-| Función | Responsable | Estado |
-|---|---|---|
-| `pantalla_inicio` | Nico | Terminada |
-| `mostrar_tabla` | Nico | Terminada |
+| Función | Responsable |
+|---|---|
+| `pantalla_inicio` | Nicolás Vazquez |
+| `mostrar_tabla` | Nicolás Vazquez |
+| `mostrar_turno` | Nicolás Vazquez |
 
 ### `jugar.R`
 
-| Sección | Responsable | Estado |
-|---|---|---|
-| Programa principal (bucle de rondas, lógica de fin de juego) | Luca | Terminado |
+| Sección | Responsable |
+|---|---|
+| Programa principal (bucle de rondas, lógica de fin de juego) | Luca Mengarelli |
+
+### `README.md`
+
+| Sección | Responsable |
+|---|---|
+| Redacción y documentación | Luca Mengarelli |
 
 ## Cómo ejecutar
 
@@ -56,10 +59,11 @@ Rscript jugar.R
 └── README.md
 ```
 
-> **Nota:** Las funciones `pantalla_inicio` y `mostrar_tabla` fueron implementadas por Nico
-> en `interfaz.R` en lugar de `funciones.R`. El archivo `jugar.R` carga ambos archivos con
-> `source()`, por lo que el juego funciona correctamente. Las funciones siguen estando
-> disponibles de la misma manera para el resto del código.
+> **Nota:** Se decidió separar las funciones de interfaz en un archivo propio (`interfaz.R`) para
+> mantener el código más organizado y limpio. De esta forma, `funciones.R` concentra exclusivamente
+> la lógica del juego, mientras que todo lo relacionado con la presentación en pantalla queda
+> agrupado en un único lugar. El archivo `jugar.R` carga ambos con `source()`, por lo que el
+> funcionamiento del programa no se ve afectado.
 
 ## Instalación del paquete `farkle`
 
@@ -80,3 +84,44 @@ pak::pkg_install("ee-unr/programacion-1/tp/farkle")
 - Si todos los dados son retirados, se puede volver a tirar con 5 dados manteniendo el puntaje del turno.
 - **Gana el primero en llegar exactamente a 1000 puntos.** Si se supera ese número, no se suman los puntos del turno.
 
+## Decisiones de diseño
+
+- **Tres archivos separados:** `funciones.R` tiene la lógica, `interfaz.R` la presentación y `jugar.R` es el punto de entrada. Así cada parte tiene su lugar y es más fácil trabajar sin pisarse entre integrantes.
+- **Convenciones unificadas:** Usamos snake_case e igual estilo de documentación en todo el proyecto para que el código sea consistente.
+- **`source()` para cargar archivos:** Es la forma más directa para un proyecto de esta escala.
+
+## Aclaraciones para el corrector
+
+- El único archivo a ejecutar es `jugar.R`. Los otros dos los carga automáticamente con `source()`.
+- El paquete `farkle` hay que instalarlo una sola vez antes de correr el programa (ver sección de instalación).
+- Corre completamente en consola, sin interfaz gráfica.
+
+## Ejemplo de ejecución
+
+```
+╔══════════════════════════════════╗
+║         Bienvenidos a Farkle     ║
+╚══════════════════════════════════╝
+
+Antes de comenzar, ingrese los nombres de los jugadores.
+Jugador 1: Nico
+Jugador 2: Luca
+
+¡Perfecto! Va a jugar «Nico» contra «Luca»
+
+¿Están listos?
+[Presione Enter para continuar]
+
+RONDA 1
+
+INFORMACIÓN DE LA PARTIDA
+
+Jugador   Puntos
+-------   ------
+Nico         0
+Luca         0
+
+Elegí una opción:
+1. Comenzar la ronda
+2. Salir del juego
+```
