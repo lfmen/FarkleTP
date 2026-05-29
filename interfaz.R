@@ -1,20 +1,32 @@
 #-------------------------------------------------------------------------------
-# interfaz.R
-# Funciones de interfaz de usuario para el juego Farkle
-# Responsable: Nicolas Vazquez
+#       PROGRAMACIÓN 1 - TRABAJO PRÁCTICO - AÑO 2026
+#-------------------------------------------------------------------------------
+#
+# GRUPO Nº 12:
+#
+# - Vazquez, Santos Nicolás - Comisión 4A
+# - Morello, Nino Julián - Comisión 2A
+# - Mengarelli, Luca Franco - Comisión 1B
+#
+# ARCHIVO: interfaz.R
+#
+# Este archivo contiene las funciones de interfaz de usuario del juego Farkle.
+# Se carga desde jugar.R con source("interfaz.R").
+#
+# RESPONSABLE: Nicolás Vazquez
 #-------------------------------------------------------------------------------
 
 #' Muestra la pantalla de inicio y lee los nombres de los jugadores
 #'
 #' @return Vector de caracteres con los dos nombres ingresados.
 pantalla_inicio <- function() {
-  #Limpiar consola
+  # Limpiar consola
   limpiar_consola()
   
-  #Mostrar título
-  titulo("######################## FARKLE - El juego de dados ##################")
+  # Mostrar título
+  titulo("######################## FARKLE - El juego de dados ########################")
   
-  #Mensaje de bienvenida y reglas del juego
+  # Mensaje de bienvenida y reglas del juego
   texto_lento(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BIENVENIDOS!!! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n
   « Farkle es un juego de dados de estrategia y gestión de riesgo en el que dos
   jugadores compiten por alcanzar el puntaje máximo de 1000 puntos antes que su
@@ -31,7 +43,7 @@ pantalla_inicio <- function() {
   tirada anterior.
   ∙ Si en una tirada el jugador no suma puntos, pierde todo lo acumulado en ese
   turno.\n")
-  texto_lento(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EVENTOS ESPECIALES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n
+  texto_lento(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EVENTOS ESPECIALES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n
   ∙ Si en una tirada todos los dados suman puntos, el jugador puede volver a 
   tirar con cinco dados.
   ∙ Si en una tirada el jugador supera el puntaje máximo, pierde todo lo 
@@ -39,13 +51,13 @@ pantalla_inicio <- function() {
   ∙ Si ambos jugadores alcanzan el puntaje máximo en la misma ronda, se 
   considera empate.\n ")
   
-  #Pausa para leer
+  # Pausa para leer
   pausa(mensaje = "")
   
-  #Limpiar consola
+  # Limpiar consola
   limpiar_consola()
   
-  #Pedir nombres
+  # Pedir nombres
   texto_lento("Antes de comenzar, ingrese los nombres de los jugadores.\n")
   texto_lento("Jugador 1: ")
   nombre1 <- leer_palabra()
@@ -58,22 +70,23 @@ pantalla_inicio <- function() {
   # Pausa antes de avanzar
   pausa(mensaje = "¿Están listos?\n")
   
-  #Devolver vector
+  # Devolver vector
   return(c(nombre1, nombre2))
 }
+
 
 #' Mostrar la tabla de puntajes actuales
 #'
 #' Esta función imprime en pantalla una tabla con los nombres y puntajes
 #' de ambos jugadores, teniendo en cuenta los espacios para que coincidan
-#' sin importar cuan largo sea el nombre.
+#' sin importar cuán largo sea el nombre.
 #'
 #' @param nombre1 Nombre del primer jugador
 #' @param nombre2 Nombre del segundo jugador
 #' @param puntaje1 Puntaje actual del primer jugador
 #' @param puntaje2 Puntaje actual del segundo jugador
 #'
-#' @return No devuelve ningún valor. Solo imprime la tabla en la consola
+#' @return No devuelve ningún valor. Solo imprime la tabla en la consola.
 #'
 #' @examples
 #' mostrar_tabla("Nico", "Ramiro", 150, 320)
@@ -95,13 +108,14 @@ mostrar_tabla <- function(nombre1, nombre2, puntaje1, puntaje2) {
   nombre2_ajustado <- paste0(nombre2, espacios2)
   
   # Imprimir la tabla con formato
-  cat("INFORMACION DE LA PARTIDA\n\n")
+  cat("INFORMACIÓN DE LA PARTIDA\n\n")
   cat("Jugador   Puntos\n")
   cat("-------   ------\n")
   cat(nombre1_ajustado, "   ", puntaje1, "\n", sep = "")
   cat(nombre2_ajustado, "   ", puntaje2, "\n", sep = "")
   cat("\n")
 }
+
 
 #' Mostrar la información del turno actual
 #'
@@ -114,10 +128,10 @@ mostrar_tabla <- function(nombre1, nombre2, puntaje1, puntaje2) {
 #'
 #' @return No devuelve ningún valor. Solo imprime la tabla en la consola.
 #'
-#' @example
+#' @examples
 #' mostrar_turno(1, 150, 3)
 mostrar_turno <- function(tirada, acumulado, disponibles) {
-  cat("INFORMACION DEL TURNO\n\n")
+  cat("INFORMACIÓN DEL TURNO\n\n")
   cat("Tiradas   Acumulado   Dados disponibles\n")
   cat("-------   ---------   -----------------\n")
   cat(tirada, "          ", acumulado, "             ", disponibles, "\n", sep = "")
