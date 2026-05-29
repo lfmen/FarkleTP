@@ -58,23 +58,6 @@ dados_sin_puntaje <- function(tirada) {
 }
 
 
-# ==============================================================================
-# RESPONSABLE: Nico
-# ==============================================================================
-
-#' Muestra la tabla de puntajes actuales de ambos jugadores
-#'
-#' @param nombre1 Cadena de texto con el nombre del jugador 1.
-#' @param nombre2 Cadena de texto con el nombre del jugador 2.
-#' @param puntaje1 Número con el puntaje total del jugador 1.
-#' @param puntaje2 Número con el puntaje total del jugador 2.
-mostrar_tabla <- function(nombre1, nombre2, puntaje1, puntaje2) {
-  # TODO (Nico):
-  # - Imprimir una tabla con los nombres y puntajes de ambos jugadores
-  # - Usar cat() para mostrar el texto en pantalla
-  # - Formato sugerido: una línea por jugador, con nombre y puntaje alineados
-}
-
 
 # ==============================================================================
 # RESPONSABLE: Nino
@@ -105,26 +88,3 @@ ejecutar_turno <- function(nombre, puntaje_total, puntaje_maximo) {
   #         - Si quedaron dados: continuar el bucle con esos dados
 }
 
-
-# ==============================================================================
-# RESPONSABLE: Nico
-# ==============================================================================
-
-#' Muestra la pantalla de inicio y lee los nombres de los jugadores
-#'
-#' @return Vector de caracteres con los dos nombres ingresados.
-pantalla_inicio <- function() {
-  # TODO (Nico):
-  # - Limpiar la consola (usar limpiar_consola())
-  # - Mostrar el título del juego (usar titulo())
-  # - Mostrar las reglas del juego con texto_lento() o cat()
-  #     * Cada jugador tira 5 dados
-  #     * Dado con 1 = 100 puntos, dado con 5 = 50 puntos
-  #     * Si ningún dado suma, se pierden los puntos del turno
-  #     * Si te pasás de 1000, se pierden los puntos del turno
-  #     * Si todos los dados sumaron, se puede volver a tirar con 5 dados
-  #     * Gana el primero en llegar a 1000 puntos
-  # - Pedir el nombre del jugador 1 (usar leer_palabra())
-  # - Pedir el nombre del jugador 2 (usar leer_palabra())
-  # - Retornar un vector con los dos nombres: c(nombre1, nombre2)
-}

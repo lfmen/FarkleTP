@@ -10,14 +10,14 @@ Trabajo Práctico de la materia **Programación 1** - Implementación del juego 
 
 ## Asignaciones
 
-| Función | Responsable | Estado |
-|---|---|---|
-| ~~`calcular_puntaje_tirada`~~ | Nino | ~~Hecho~~ |
-| `ejecutar_turno` | Nino | |
-| ~~`dados_sin_puntaje`~~ | Luca | ~~Hecho~~ |
-| `mostrar_tabla` | Nico | |
-| `pantalla_inicio` | Nico | |
-| `jugar.R` | Luca | |
+| Función | Responsable | Archivo | Estado |
+|---|---|---|---|
+| ~~`calcular_puntaje_tirada`~~ | Nino | `funciones.R` | ~~Hecho~~ |
+| `ejecutar_turno` | Nino | `funciones.R` | |
+| ~~`dados_sin_puntaje`~~ | Luca | `funciones.R` | ~~Hecho~~ |
+| ~~`mostrar_tabla`~~ | Nico | `interfaz.R` | ~~Hecho~~ |
+| ~~`pantalla_inicio`~~ | Nico | `interfaz.R` | ~~Hecho~~ |
+| ~~`jugar.R`~~ | Luca | `jugar.R` | ~~Hecho~~ |
 
 ## Cómo ejecutar
 
@@ -31,9 +31,15 @@ Rscript jugar.R
 
 ```
 ├── jugar.R        # Script principal (punto de entrada)
-├── funciones.R    # Funciones auxiliares del juego
+├── funciones.R    # Funciones del juego: calcular_puntaje_tirada, dados_sin_puntaje, ejecutar_turno
+├── interfaz.R     # Funciones de interfaz: pantalla_inicio, mostrar_tabla
 └── README.md
 ```
+
+> **Nota:** Las funciones `pantalla_inicio` y `mostrar_tabla` fueron implementadas por Nico
+> en `interfaz.R` en lugar de `funciones.R`. El archivo `jugar.R` carga ambos archivos con
+> `source()`, por lo que el juego funciona correctamente. Las funciones siguen estando
+> disponibles de la misma manera para el resto del código.
 
 ## Instalación del paquete `farkle`
 
