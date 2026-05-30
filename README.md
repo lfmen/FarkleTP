@@ -55,7 +55,7 @@ Rscript jugar.R
 ```
 ├── jugar.R        # Script principal (punto de entrada)
 ├── funciones.R    # Funciones del juego: calcular_puntaje_tirada, dados_sin_puntaje, ejecutar_turno
-├── interfaz.R     # Funciones de interfaz: pantalla_inicio, mostrar_tabla
+├── interfaz.R     # Funciones de interfaz: pantalla_inicio, mostrar_tabla, mostrar_turno
 └── README.md
 ```
 
