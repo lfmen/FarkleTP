@@ -14,6 +14,7 @@
 # Se carga desde jugar.R con source("interfaz.R").
 #
 # RESPONSABLE: Nicolás Vazquez
+# FUNCIONES: pantalla_inicio, mostrar_tabla, mostrar_turno
 #-------------------------------------------------------------------------------
 
 #' Muestra la pantalla de inicio y lee los nombres de los jugadores
@@ -65,7 +66,7 @@ pantalla_inicio <- function() {
   nombre2 <- leer_palabra()
   
   # Mensaje de confirmación con los nombres
-  texto_lento("\n¡Perfecto! Va a jugar «",nombre1, "» contra «",nombre2, "»\n")
+  texto_lento("\n¡Perfecto! Va a jugar «", nombre1, "» contra «", nombre2, "»\n")
   
   # Pausa antes de avanzar
   pausa(mensaje = "¿Están listos?\n")
