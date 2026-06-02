@@ -18,6 +18,7 @@
 # implementadas por Nico en interfaz.R y se cargan desde ahí.
 #
 # RESPONSABLE: Luca Mengarelli
+# LÓGICA PRINCIPAL: Bucle del juego y condiciones de victoria
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
