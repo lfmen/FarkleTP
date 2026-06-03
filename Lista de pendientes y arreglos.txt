@@ -3,9 +3,9 @@ COSAS A CAMBIAR
 DONE 1- Pantalla_inicio: acelerar letras
 DONE 2- Titulo: acomodar los "#"
 DONE 3- mostrar_tabla: puntajes muy lejos, alinear puntos.(cambiar de lugar con nombres?) SOLUCIÓN: Se restauró la tabla clásica agregando max(largo1, largo2, 7) para centrar la columna Puntos perfectamente.
-4- mostrar_dados: agregar" Salieron los siguientes dados:"
+DONE 4- mostrar_dados: agregar" Salieron los siguientes dados:"
 
-5- Comenzar ronda -> informacion_turno: falta mostrar la tabla junto con tirar dados ;
+DONE 5- Comenzar ronda -> informacion_turno: falta mostrar la tabla junto con tirar dados ;
 Y titulo del turno con nombre arriba.
 
 DONE 6- Cuando se queda sin dados, avisa y limpia consola. SOLUCIÓN: Es el mismo error que el punto 2 de abajo. Se solucionó agregando pausa() al perder el turno ("No te salió nada").
