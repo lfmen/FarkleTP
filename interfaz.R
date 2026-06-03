@@ -14,7 +14,7 @@
 # Se carga desde jugar.R con source("interfaz.R").
 #
 # RESPONSABLE: Nicolás Vazquez
-# FUNCIONES: pantalla_inicio, mostrar_tabla, mostrar_turno
+# FUNCIONES: pantalla_inicio, mostrar_puntaje, mostrar_turno
 #-------------------------------------------------------------------------------
 
 #' Muestra la pantalla de inicio y lee los nombres de los jugadores
@@ -76,44 +76,23 @@ pantalla_inicio <- function() {
 }
 
 
-#' Mostrar la tabla de puntajes actuales
+#' Mostrar los puntajes actuales de la partida.
 #'
-#' Esta función imprime en pantalla una tabla con los nombres y puntajes
-#' de ambos jugadores, teniendo en cuenta los espacios para que coincidan
-#' sin importar cuán largo sea el nombre.
+#' Imprime en pantalla los nombres y puntajes usando una flecha para separar.
 #'
 #' @param nombre1 Nombre del primer jugador
 #' @param nombre2 Nombre del segundo jugador
 #' @param puntaje1 Puntaje actual del primer jugador
 #' @param puntaje2 Puntaje actual del segundo jugador
 #'
-#' @return No devuelve ningún valor. Solo imprime la tabla en la consola.
+#' @return No devuelve ningún valor. Solo imprime la información en la consola.
 #'
 #' @examples
-#' mostrar_tabla("Nico", "Ramiro", 150, 320)
-mostrar_tabla <- function(nombre1, nombre2, puntaje1, puntaje2) {
-  # Calcular el largo (cantidad de letras) de cada nombre
-  largo1 <- nchar(nombre1)
-  largo2 <- nchar(nombre2)
-  
-  # Determinar el máximo largo entre los dos nombres (mínimo 7 para "Jugador")
-  max_largo <- max(largo1, largo2, 7)
-  
-  # Crear una cadena con los espacios que faltan para cada nombre
-  # hasta alcanzar el largo máximo
-  espacios1 <- paste(rep(" ", max_largo - largo1), collapse = "")
-  espacios2 <- paste(rep(" ", max_largo - largo2), collapse = "")
-  
-  # Ajustar los nombres agregando los espacios al final
-  nombre1_ajustado <- paste0(nombre1, espacios1)
-  nombre2_ajustado <- paste0(nombre2, espacios2)
-  
-  # Imprimir la tabla con formato
+#' mostrar_puntaje("Nico", "Ramiro", 150, 320)
+mostrar_puntaje <- function(nombre1, nombre2, puntaje1, puntaje2) {
   cat("INFORMACIÓN DE LA PARTIDA\n\n")
-  cat("Jugador   Puntos\n")
-  cat("-------   ------\n")
-  cat(nombre1_ajustado, "   ", puntaje1, "\n", sep = "")
-  cat(nombre2_ajustado, "   ", puntaje2, "\n", sep = "")
+  cat(nombre1, "→", puntaje1, "puntos\n")
+  cat(nombre2, "→", puntaje2, "puntos\n")
   cat("\n")
 }
 

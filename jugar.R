@@ -14,7 +14,7 @@
 # jugar.R, desde el directorio en el que esté guardado junto con cualquier otro
 # archivo que sea creado como parte de la solución.
 #
-# Las funciones de interfaz (pantalla_inicio, mostrar_tabla) fueron
+# Las funciones de interfaz (pantalla_inicio, mostrar_puntaje) fueron
 # implementadas por Nico en interfaz.R y se cargan desde ahí.
 #
 # RESPONSABLE: Luca Mengarelli
@@ -60,7 +60,7 @@ while (juego_activo) {
 
   limpiar_consola()
   titulo(paste("RONDA", ronda))
-  mostrar_tabla(nombre1, nombre2, puntaje1, puntaje2)
+  mostrar_puntaje(nombre1, nombre2, puntaje1, puntaje2)
 
   opcion_ronda <- leer_opciones(
     "Elegí una opción:",
@@ -90,25 +90,25 @@ while (juego_activo) {
       # Empate: ambos llegaron a 1000 en la misma ronda
       titulo("¡EMPATE!")
       cat("\nAmbos jugadores llegaron a", puntaje_maximo, "puntos en la misma ronda.\n")
-      mostrar_tabla(nombre1, nombre2, puntaje1, puntaje2)
+      mostrar_puntaje(nombre1, nombre2, puntaje1, puntaje2)
       juego_activo <- FALSE
 
     } else if (puntaje1 == puntaje_maximo) {
       # Ganó el jugador 1
       titulo(paste("¡GANA", nombre1, "!"))
-      mostrar_tabla(nombre1, nombre2, puntaje1, puntaje2)
+      mostrar_puntaje(nombre1, nombre2, puntaje1, puntaje2)
       juego_activo <- FALSE
 
     } else if (puntaje2 == puntaje_maximo) {
       # Ganó el jugador 2
       titulo(paste("¡GANA", nombre2, "!"))
-      mostrar_tabla(nombre1, nombre2, puntaje1, puntaje2)
+      mostrar_puntaje(nombre1, nombre2, puntaje1, puntaje2)
       juego_activo <- FALSE
 
     } else {
       # La partida continúa: mostrar resumen de la ronda y avanzar
       titulo(paste("FIN DE LA RONDA", ronda))
-      mostrar_tabla(nombre1, nombre2, puntaje1, puntaje2)
+      mostrar_puntaje(nombre1, nombre2, puntaje1, puntaje2)
       pausa()
       ronda <- ronda + 1
     }
