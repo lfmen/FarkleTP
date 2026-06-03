@@ -94,6 +94,7 @@ ejecutar_turno <- function(nombre, puntaje_total, puntaje_maximo) {
     
     if (calcular_puntaje_tirada(tirada) == 0) { 
       texto_lento("No te salió nada. Perdiste el turno.\n") 
+      pausa()
       return(0)
     } else {
       puntaje_acumulado <- puntaje_acumulado + calcular_puntaje_tirada(tirada)
@@ -102,6 +103,7 @@ ejecutar_turno <- function(nombre, puntaje_total, puntaje_maximo) {
     
     if (puntaje_total + puntaje_acumulado > puntaje_maximo) {
       texto_lento("Te pasaste del puntaje máximo. Perdiste el turno.\n")
+      pausa()
       return(0)
     }
     

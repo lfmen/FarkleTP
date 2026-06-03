@@ -15,7 +15,7 @@ Y titulo del turno con nombre arriba.
 COSAS A PROBAR
 
 1- Legar a 1000
-2- Pasarte de 1000 > ANDA el mensaje (sacar limpiar consola).
+DONE 2- Pasarte de 1000 > ANDA el mensaje (sacar limpiar consola).
 3- EMPATE? (ambos jugadores sacan 1000 en la misma ronda)
 4- Cuando 2 jugadores se pasan de 1000 al mismo tiempo
 5- Si un jugador usa los 5 dados y todos suman puntos, devolvuelve los 5 dados?
