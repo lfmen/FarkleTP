@@ -94,6 +94,8 @@ mostrar_puntaje <- function(nombre1, nombre2, puntaje1, puntaje2) {
   cat(nombre1, "→", puntaje1, "puntos\n")
   cat(nombre2, "→", puntaje2, "puntos\n")
   cat("\n")
+  cat("######################################################################")
+  cat("\n\n")
 }
 
 
