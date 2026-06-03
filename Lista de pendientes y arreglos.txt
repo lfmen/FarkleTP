@@ -8,14 +8,14 @@ DONE 3- mostrar_tabla: puntajes muy lejos, alinear puntos.(cambiar de lugar con 
 5- Comenzar ronda -> informacion_turno: falta mostrar la tabla junto con tirar dados ;
 Y titulo del turno con nombre arriba.
 
-6- Cuando se queda sin dados, avisa y limpia consola (falta el continuar)(Quitar el limpiar)
+DONE 6- Cuando se queda sin dados, avisa y limpia consola. SOLUCIÓN: Es el mismo error que el punto 2 de abajo. Se solucionó agregando pausa() al perder el turno ("No te salió nada").
 
 
 
 COSAS A PROBAR
 
-1- Legar a 1000
+DONE 1- Legar a 1000 (funciona en jugar.R)
 DONE 2- Pasarte de 1000 > ANDA el mensaje. SOLUCIÓN: Se agregó pausa() en ejecutar_turno. No hacía falta sacar limpiar_consola().
-3- EMPATE? (ambos jugadores sacan 1000 en la misma ronda)
-4- Cuando 2 jugadores se pasan de 1000 al mismo tiempo
-5- Si un jugador usa los 5 dados y todos suman puntos, devolvuelve los 5 dados?
+DONE 3- EMPATE? (ambos jugadores sacan 1000 en la misma ronda) (cubierto en jugar.R)
+DONE 4- Cuando 2 jugadores se pasan de 1000 al mismo tiempo (pierden turno y no ganan, lógica OK)
+DONE 5- Si un jugador usa los 5 dados y todos suman puntos, devolvuelve los 5 dados? (Sí, lógica en ejecutar_turno lo hace)
