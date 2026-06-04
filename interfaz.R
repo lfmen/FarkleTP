@@ -70,6 +70,7 @@ pantalla_inicio <- function() {
   texto_lento("Antes de comenzar, ingrese los nombres de los jugadores.\n", pausa = 0.003)
   texto_lento("Jugador 1: ", pausa = 0.003)
   nombre1 <- leer_palabra()
+  cat("\n")
   texto_lento("Jugador 2: ", pausa = 0.003)
   nombre2 <- leer_palabra()
   
@@ -84,24 +85,35 @@ pantalla_inicio <- function() {
 }
 
 
-#' Mostrar los puntajes actuales de la partida.
+#' Muestra una tabla con los puntajes de ambos jugadores
 #'
-#' Imprime en pantalla los nombres y puntajes usando una flecha ASCII para separar.
+#' Imprime una tabla con los nombres de los jugadores y sus puntajes
+#' (alineados a la derecha).
+#' El ancho de la columna de nombres se ajusta
+#' automáticamente al nombre más largo.(Dejando un mínimo de 8 caractéres para
+#' nombres cortos) , evitando desalineamientos.
 #'
 #' @param nombre1 Nombre del primer jugador
 #' @param nombre2 Nombre del segundo jugador
 #' @param puntaje1 Puntaje actual del primer jugador
 #' @param puntaje2 Puntaje actual del segundo jugador
 #'
-#' @return No devuelve ningún valor. Solo imprime la información en la consola.
+#' @return No devuelve ningún valor. Solo imprime la tabla en la consola.
 #'
 #' @examples
-#' mostrar_puntaje("Nico", "Ramiro", 150, 320)
+#' mostrar_puntaje("Nicolas", "Ramiro", 250, 0)
 mostrar_puntaje <- function(nombre1, nombre2, puntaje1, puntaje2) {
-  cat("INFORMACIÓN DE LA PARTIDA\n\n")
-  cat(nombre1, "->", puntaje1, "puntos\n")
-  cat(nombre2, "->", puntaje2, "puntos\n")
-  cat("\n")
+  
+  # Buscamos el nombre mas largo, con un mínimo de 8 caracteres.
+  ancho <- max(nchar(nombre1), nchar(nombre2), 8)
+  
+  # Imprimimos la tabla teniendo en cuenta el temaño del nombre.
+  cat("INFORMACION DE LA PARTIDA\n\n")
+  cat(format("Jugador", width = ancho), format("Puntos", width = 6, justify = "right"), "\n")
+  cat(format("-------", width = ancho), format("------", width = 6, justify = "right"), "\n")
+  cat(format(nombre1, width = ancho), format(puntaje1, width = 6, justify = "right"), "\n")
+  cat(format(nombre2, width = ancho), format(puntaje2, width = 6, justify = "right"), "\n")
+  cat("\n\n")
 }
 
 
@@ -122,7 +134,7 @@ mostrar_turno <- function(cant_tiradas, acumulado, disponibles) {
   cat("INFORMACIÓN DEL TURNO\n\n")
   cat("Tiradas   Acumulado   Dados disponibles\n")
   cat("-------   ---------   -----------------\n")
-  # usamos format(width=) que encontramos buscando en la documentacion de r
+  # usamos format(width=) que encontramos buscando en la documentacion de R
   # para forzar el ancho de columna y que la tabla no se desalinee
   cat(format(cant_tiradas, width = 7), "  ",
       format(acumulado,    width = 9), "  ",
