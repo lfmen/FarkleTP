@@ -100,7 +100,7 @@ ejecutar_turno <- function(nombre, puntaje_total, puntaje_maximo) {
     
     if (puntaje_tirada == 0) { 
       texto_lento("No te salió ni 5 ni 1. Perdiste todos los puntos acumulados en este turno.\n", pausa = 0.003) 
-      pausa()
+      pausa("")
       return(0)
     } else {
       puntaje_acumulado <- puntaje_acumulado + puntaje_tirada
@@ -109,7 +109,7 @@ ejecutar_turno <- function(nombre, puntaje_total, puntaje_maximo) {
     
     if (puntaje_total + puntaje_acumulado > puntaje_maximo) {
       texto_lento("Te pasaste del puntaje máximo. Puntos acumulados perdidos.\n", pausa = 0.003)
-      pausa()
+      pausa("")
       return(0)
     }
     
@@ -122,7 +122,7 @@ ejecutar_turno <- function(nombre, puntaje_total, puntaje_maximo) {
       texto_lento("\n* ¡Usaste todos los dados! Podés volver a tirar con 5 dados.\n", pausa = 0.003)
     }
     
-    pausa()
+    pausa("")
     limpiar_consola()
   }
 }

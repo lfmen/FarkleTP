@@ -109,7 +109,7 @@ while (juego_activo) {
       # La partida continúa: mostrar resumen de la ronda y avanzar
       titulo(paste0("FIN DE LA RONDA ", ronda))
       mostrar_puntaje(nombre1, nombre2, puntaje1, puntaje2)
-      pausa()
+      pausa("")
       ronda <- ronda + 1
     }
   }
