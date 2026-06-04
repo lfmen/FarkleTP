@@ -1,6 +1,6 @@
-# Farkle TP - Programación 1 (2026)
+# Trabajo Práctico de la materia **Programación 1** - Implementación del juego de dados **Farkle** en R.
 
-¡Hola! Este es nuestro Trabajo Práctico para la materia **Programación 1**. Acá implementamos el clásico juego de dados **Farkle** usando R.
+## Grupo Nº 12
 
 ## Integrantes del grupo
 
