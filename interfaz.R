@@ -90,8 +90,8 @@ pantalla_inicio <- function() {
 #' Imprime una tabla con los nombres de los jugadores y sus puntajes
 #' (alineados a la derecha).
 #' El ancho de la columna de nombres se ajusta
-#' automáticamente al nombre más largo.(Dejando un mínimo de 8 caractéres para
-#' nombres cortos) , evitando desalineamientos.
+#' automáticamente al nombre más largo (dejando un mínimo de 8 caracteres para
+#' nombres cortos), evitando desalineamientos.
 #'
 #' @param nombre1 Nombre del primer jugador
 #' @param nombre2 Nombre del segundo jugador
@@ -104,11 +104,11 @@ pantalla_inicio <- function() {
 #' mostrar_puntaje("Nicolas", "Ramiro", 250, 0)
 mostrar_puntaje <- function(nombre1, nombre2, puntaje1, puntaje2) {
   
-  # Buscamos el nombre mas largo, con un mínimo de 8 caracteres.
+  # Buscamos el nombre más largo, con un mínimo de 8 caracteres.
   ancho <- max(nchar(nombre1), nchar(nombre2), 8)
   
-  # Imprimimos la tabla teniendo en cuenta el temaño del nombre.
-  cat("INFORMACION DE LA PARTIDA\n\n")
+  # Imprimimos la tabla teniendo en cuenta el tamaño del nombre.
+  cat("INFORMACIÓN DE LA PARTIDA\n\n")
   cat(format("Jugador", width = ancho), format("Puntos", width = 6, justify = "right"), "\n")
   cat(format("-------", width = ancho), format("------", width = 6, justify = "right"), "\n")
   cat(format(nombre1, width = ancho), format(puntaje1, width = 6, justify = "right"), "\n")
@@ -134,9 +134,9 @@ mostrar_turno <- function(cant_tiradas, acumulado, disponibles) {
   cat("INFORMACIÓN DEL TURNO\n\n")
   cat("Tiradas   Acumulado   Dados disponibles\n")
   cat("-------   ---------   -----------------\n")
-  # usamos format(width=) que encontramos buscando en la documentacion de R
+  # usamos format(width=) que encontramos buscando en la documentación de R
   # para forzar el ancho de columna y que la tabla no se desalinee
-  cat(format(cant_tiradas, width = 7), "  ",
-      format(acumulado,    width = 9), "  ",
-      format(disponibles,  width = 16), "\n", sep = "")
+  cat(format(cant_tiradas, width = 7), "   ",
+      format(acumulado,    width = 9), "   ",
+      format(disponibles,  width = 17), "\n", sep = "")
 }

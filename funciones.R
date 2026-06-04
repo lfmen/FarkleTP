@@ -17,7 +17,7 @@
 
 # ==============================================================================
 # RESPONSABLE: Nino Morello
-# FUNCION: calcular_puntaje_tirada
+# FUNCIÓN: calcular_puntaje_tirada
 # ==============================================================================
 
 #' Calcula el puntaje obtenido en una tirada
@@ -41,7 +41,7 @@ calcular_puntaje_tirada <- function(tirada) {
 
 # ==============================================================================
 # RESPONSABLE: Luca Mengarelli
-# FUNCION: dados_sin_puntaje
+# FUNCIÓN: dados_sin_puntaje
 # ==============================================================================
 
 #' Cuenta cuántos dados de una tirada no suman puntos
@@ -62,7 +62,7 @@ dados_sin_puntaje <- function(tirada) {
 
 # ==============================================================================
 # RESPONSABLE: Nino Morello
-# FUNCION: ejecutar_turno
+# FUNCIÓN: ejecutar_turno
 # ==============================================================================
 
 #' Ejecuta el turno completo de un jugador
@@ -83,7 +83,7 @@ ejecutar_turno <- function(nombre, puntaje_total, puntaje_maximo) {
     cat("\n")
     
     if (cant_tiradas > 0) {
-      decision <- leer_opciones("¿Tirar dados?", "Si", "No")
+      decision <- leer_opciones("¿Tirar dados?", "Sí", "No")
       
       if (decision == 2) {
         return(puntaje_acumulado)
@@ -99,7 +99,7 @@ ejecutar_turno <- function(nombre, puntaje_total, puntaje_maximo) {
     puntaje_tirada <- calcular_puntaje_tirada(tirada)
     
     if (puntaje_tirada == 0) { 
-      texto_lento("No te salió ni 5 ni 1. Perdiste todos los puntos acumulados en este turno.\n", pausa = 0.003) 
+      texto_lento("\nNo te salió ni 5 ni 1. Perdiste todos los puntos acumulados en este turno.\n", pausa = 0.003) 
       pausa("")
       return(0)
     } else {
