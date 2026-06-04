@@ -37,12 +37,12 @@ pantalla_inicio <- function() {
   
   # Mensaje de bienvenida y reglas del juego
   texto_lento(" /// BIENVENIDOS! ////////////////////////////////////////////////////////// \n
-  > Farkle es un juego de dados de estrategia y gestion de riesgo en el que dos
-  jugadores compiten por alcanzar el puntaje maximo de 1000 puntos antes que
+  > Farkle es un juego de dados de estrategia y gestión de riesgo en el que dos
+  jugadores compiten por alcanzar el puntaje máximo de 1000 puntos antes que
   su rival.
-  > La partida se desarrolla a lo largo de multiples rondas. En cada una de
+  > La partida se desarrolla a lo largo de múltiples rondas. En cada una de
   estas rondas, los jugadores participan por turnos respetando un orden. Dentro
-  de su turno, cada jugador puede lanzar los dados una o mas veces, dependiendo
+  de su turno, cada jugador puede lanzar los dados una o más veces, dependiendo
   del resultado de cada tirada. \n" , pausa = 0.003)
   texto_lento(" /// REGLAS /////////////////////////////////////////////////////////////// \n
   * Cada jugador comienza lanzando cinco dados.
@@ -55,9 +55,9 @@ pantalla_inicio <- function() {
   texto_lento(" /// EVENTOS ESPECIALES ////////////////////////////////////////////////// \n
   * Si en una tirada todos los dados suman puntos, el jugador puede volver a
   tirar con cinco dados.
-  * Si en una tirada el jugador supera el puntaje maximo, pierde todo lo
+  * Si en una tirada el jugador supera el puntaje máximo, pierde todo lo
   acumulado en ese turno.
-  * Si ambos jugadores alcanzan el puntaje maximo en la misma ronda, se
+  * Si ambos jugadores alcanzan el puntaje máximo en la misma ronda, se
   considera empate.\n ", pausa = 0.003)
   
   # Pausa para leer
